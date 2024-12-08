@@ -186,16 +186,16 @@ const Dashboard = () => {
 
             <canvas className="my-4 w-100" id="myChart" width="900" height="380" ref={chartRef}></canvas>
 
-            <h2>Section title</h2>
+            <h2>Impressions by source</h2>
             <div className="table-responsive small">
               <table className="table table-striped table-sm">
                 <thead>
                   <tr>
                     <th scope="col">#</th>
-                    <th scope="col">Header</th>
-                    <th scope="col">Header</th>
-                    <th scope="col">Header</th>
-                    <th scope="col">Header</th>
+                    <th scope="col">Columns</th>
+                    <th scope="col">National</th>
+                    <th scope="col">Kansas</th>
+                    <th scope="col">McPherson</th>
                   </tr>
                 </thead>
                 <tbody>
