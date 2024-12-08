@@ -111,7 +111,7 @@ const Dashboard = () => {
                   <li className="nav-item">
                     <a className="nav-link d-flex align-items-center gap-2" href="#">
                       <i className="bi bi-puzzle"></i>
-                      Integrations
+                      Calendar
                     </a>
                   </li>
                 </ul>
@@ -192,7 +192,7 @@ const Dashboard = () => {
                 <thead>
                   <tr>
                     <th scope="col">#</th>
-                    <th scope="col">Columns</th>
+                    <th scope="col">Calendar</th>
                     <th scope="col">National</th>
                     <th scope="col">Kansas</th>
                     <th scope="col">McPherson</th>
