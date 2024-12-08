@@ -1,57 +1,48 @@
 import React, { useEffect, useRef } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import 'bootstrap/dist/js/bootstrap.bundle.min.js'; 
+import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import 'bootstrap-icons/font/bootstrap-icons.css';
-import './dashboard.css'; // Ensure this file is present in the same directory
-import { Chart } from 'chart.js/auto'; // Using chart.js 3+ auto-registration
+import './dashboard.css';
+import { Chart } from 'chart.js/auto';
 
 const Dashboard = () => {
   const chartRef = useRef(null);
+  const chartInstanceRef = useRef(null);
 
   useEffect(() => {
-    // Initialize Chart.js after component mounts
-    if (chartRef.current) {
-      new Chart(chartRef.current, {
-        type: 'line',
-        data: {
-          labels: [
-            'Sunday',
-            'Monday',
-            'Tuesday',
-            'Wednesday',
-            'Thursday',
-            'Friday',
-            'Saturday'
-          ],
-          datasets: [{
-            data: [
-              15339,
-              21345,
-              18483,
-              24003,
-              23489,
-              24092,
-              12034
-            ],
-            lineTension: 0,
-            backgroundColor: 'transparent',
-            borderColor: '#007bff',
-            borderWidth: 4,
-            pointBackgroundColor: '#007bff'
-          }]
-        },
-        options: {
-          plugins: {
-            legend: {
-              display: false
-            },
-            tooltip: {
-              boxPadding: 3
-            }
-          }
-        }
-      });
+    // Destroy existing chart instance if it exists (in case of re-renders in strict mode)
+    if (chartInstanceRef.current) {
+      chartInstanceRef.current.destroy();
     }
+
+    // Create a new chart instance
+    chartInstanceRef.current = new Chart(chartRef.current, {
+      type: 'line',
+      data: {
+        labels: ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
+        datasets: [{
+          data: [15339, 21345, 18483, 24003, 23489, 24092, 12034],
+          lineTension: 0,
+          backgroundColor: 'transparent',
+          borderColor: '#007bff',
+          borderWidth: 4,
+          pointBackgroundColor: '#007bff'
+        }]
+      },
+      options: {
+        plugins: {
+          legend: { display: false },
+          tooltip: { boxPadding: 3 }
+        }
+      }
+    });
+
+    // Cleanup function to destroy the chart on unmount
+    return () => {
+      if (chartInstanceRef.current) {
+        chartInstanceRef.current.destroy();
+      }
+    };
   }, []);
 
   return (
@@ -243,7 +234,7 @@ const Dashboard = () => {
                     <td>layout</td>
                     <td>dashboard</td>
                   </tr>
-                  {/* Add more rows as needed. The provided snippet had many more rows */}
+                  {/* Add more rows as needed */}
                 </tbody>
               </table>
             </div>
