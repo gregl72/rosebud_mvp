@@ -21,7 +21,7 @@ const components = {
       <View textAlign="center" padding="large">
         <Image
           alt="Company logo"
-          src="/logo.jpeg"
+          src="/logo.jpg"
           style={{ marginBottom: '1rem', height: '50px' }}
         />
         <Heading level={3}>rosebud v0.0</Heading>
