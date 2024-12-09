@@ -21,10 +21,10 @@ const components = {
       <View textAlign="center" padding="large">
         <Image
           alt="Company logo"
-          src="/path/to/logo.png" // Update this with your actual logo path
+          src="/logo.jpeg" // Update this with your actual logo path
           style={{ marginBottom: '1rem', height: '50px' }}
         />
-        <Heading level={3}>Welcome to My App</Heading>
+        <Heading level={3}>rosebud v0.0</Heading>
         <Text>Sign in to continue</Text>
       </View>
     );
