@@ -14,14 +14,14 @@ import Dashboard from './Dashboard';
 
 Amplify.configure(awsconfig);
 
-// Define custom Authenticator components
+// Define custom Authenticator components without FormFields override
 const components = {
   Header() {
     return (
       <View textAlign="center" padding="large">
         <Image
           alt="Company logo"
-          src="/logo.jpeg" // Update this with your actual logo path
+          src="/logo.jpeg"
           style={{ marginBottom: '1rem', height: '50px' }}
         />
         <Heading level={3}>rosebud v0.0</Heading>
@@ -40,24 +40,19 @@ const components = {
   },
 };
 
-// Define a static theme
 const myTheme = {
   name: 'MyCustomTheme',
   tokens: {
     colors: {
       brand: {
-        primary: {
-          10: '#FF6F61', // Your brand's primary color
-        },
+        primary: { 10: '#FF6F61' },
       },
     },
     components: {
       button: {
         primary: {
           backgroundColor: { value: '#FF6F61' },
-          _hover: {
-            backgroundColor: { value: '#FF5A4F' },
-          },
+          _hover: { backgroundColor: { value: '#FF5A4F' } },
         },
       },
     },
@@ -66,7 +61,24 @@ const myTheme = {
 
 function App() {
   return (
-    <Authenticator variation="default" theme={myTheme} components={components}>
+    <Authenticator
+      variation="default"
+      theme={myTheme}
+      components={components}
+      usernameAlias="email"
+      signUpAttributes={['address', 'family_name', 'given_name', 'phone_number']}
+      formFields={{
+        signUp: {
+          email: { label: 'Email', type: 'email', order: 1 },
+          address: { label: 'Address', type: 'text', order: 2 },
+          family_name: { label: 'Family Name', type: 'text', order: 3 },
+          given_name: { label: 'Given Name', type: 'text', order: 4 },
+          phone_number: { label: 'Phone Number', type: 'tel', order: 5 },
+          password: { label: 'Password', type: 'password', order: 6 },
+          confirm_password: { label: 'Confirm Password', type: 'password', order: 7 },
+        },
+      }}
+    >
       {({ signOut, user }) => (
         <div style={{ padding: '1rem' }}>
           <Heading level={3}>Hello, {user?.username}!</Heading>
