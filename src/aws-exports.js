@@ -5,8 +5,8 @@ const awsmobile = {
     "aws_project_region": "us-east-2",
     "Auth": {
         "region": "us-east-2",
-        "userPoolId": "us-east-2_RI8XBDcog",
-        "userPoolWebClientId": "a2tsigds7ok4ah53osi8tn2vf",
+        "userPoolId": "us-east-2_irQwh9CQH",
+        "userPoolWebClientId": "7tg4nkkco2hljjudoem8cv0aql",
         "mandatorySignIn": false
     }
 };
