@@ -76,12 +76,12 @@ function App() {
           phone_number: { label: 'Phone Number', type: 'tel', order: 5 },
           password: { label: 'Password', type: 'password', order: 6 },
           confirm_password: { label: 'Confirm Password', type: 'password', order: 7 },
+          preferred_username: { label: 'Username', type: 'username', order: 8 },
         },
       }}
     >
       {({ signOut, user }) => (
         <div style={{ padding: '1rem' }}>
-          <Heading level={3}>Hello, {user?.username}!</Heading>
           <Dashboard />
           <button onClick={signOut} style={{ marginTop: '1rem' }}>
             Sign Out
