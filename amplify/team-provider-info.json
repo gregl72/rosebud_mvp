@@ -13,7 +13,20 @@
     },
     "categories": {
       "auth": {
-        "rosebudmvp": {}
+        "rosebudmvp": {
+          "userPoolId": "us-east-2_tZI9vrJO1",
+          "userPoolName": "rosebud-dev",
+          "webClientId": "59jjnbmo5g2d34had5tsajqfmt",
+          "nativeClientId": "59jjnbmo5g2d34had5tsajqfmt",
+          "identityPoolId": "us-east-2:589bc555-2cb0-4a69-aecd-12fd624c9257",
+          "identityPoolName": "testAuthIdentityPool__dev",
+          "allowUnauthenticatedIdentities": false,
+          "authRoleArn": "arn:aws:iam::180294198964:role/amplify-rosebud-dev-b5ed4-authRole",
+          "authRoleName": "amplify-rosebud-dev-b5ed4-authRole",
+          "unauthRoleArn": "arn:aws:iam::180294198964:role/amplify-rosebud-dev-b5ed4-unauthRole",
+          "unauthRoleName": "amplify-rosebud-dev-b5ed4-unauthRole"
+        },
+        "rosebudmvpe7930b0c": {}
       }
     }
   }

@@ -1,3 +1,101 @@
 {
-  "auth": {}
+  "auth": {
+    "rosebudmvp": {
+      "customAuth": false,
+      "dependsOn": [],
+      "providerPlugin": "awscloudformation",
+      "service": "Cognito",
+      "serviceType": "imported"
+    }
+  },
+  "parameters": {
+    "AMPLIFY_auth_rosebudmvp_allowUnauthenticatedIdentities": {
+      "usedBy": [
+        {
+          "category": "auth",
+          "resourceName": "rosebudmvp"
+        }
+      ]
+    },
+    "AMPLIFY_auth_rosebudmvp_authRoleArn": {
+      "usedBy": [
+        {
+          "category": "auth",
+          "resourceName": "rosebudmvp"
+        }
+      ]
+    },
+    "AMPLIFY_auth_rosebudmvp_authRoleName": {
+      "usedBy": [
+        {
+          "category": "auth",
+          "resourceName": "rosebudmvp"
+        }
+      ]
+    },
+    "AMPLIFY_auth_rosebudmvp_identityPoolId": {
+      "usedBy": [
+        {
+          "category": "auth",
+          "resourceName": "rosebudmvp"
+        }
+      ]
+    },
+    "AMPLIFY_auth_rosebudmvp_identityPoolName": {
+      "usedBy": [
+        {
+          "category": "auth",
+          "resourceName": "rosebudmvp"
+        }
+      ]
+    },
+    "AMPLIFY_auth_rosebudmvp_nativeClientId": {
+      "usedBy": [
+        {
+          "category": "auth",
+          "resourceName": "rosebudmvp"
+        }
+      ]
+    },
+    "AMPLIFY_auth_rosebudmvp_unauthRoleArn": {
+      "usedBy": [
+        {
+          "category": "auth",
+          "resourceName": "rosebudmvp"
+        }
+      ]
+    },
+    "AMPLIFY_auth_rosebudmvp_unauthRoleName": {
+      "usedBy": [
+        {
+          "category": "auth",
+          "resourceName": "rosebudmvp"
+        }
+      ]
+    },
+    "AMPLIFY_auth_rosebudmvp_userPoolId": {
+      "usedBy": [
+        {
+          "category": "auth",
+          "resourceName": "rosebudmvp"
+        }
+      ]
+    },
+    "AMPLIFY_auth_rosebudmvp_userPoolName": {
+      "usedBy": [
+        {
+          "category": "auth",
+          "resourceName": "rosebudmvp"
+        }
+      ]
+    },
+    "AMPLIFY_auth_rosebudmvp_webClientId": {
+      "usedBy": [
+        {
+          "category": "auth",
+          "resourceName": "rosebudmvp"
+        }
+      ]
+    }
+  }
 }

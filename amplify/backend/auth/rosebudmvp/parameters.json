@@ -1,0 +1,24 @@
+{
+  "authSelections": "identityPoolAndUserPool",
+  "resourceName": "rosebudmvp",
+  "serviceType": "imported",
+  "region": "us-east-2",
+  "usernameAttributes": [
+    "email"
+  ],
+  "requiredAttributes": [
+    "address",
+    "preferred_username",
+    "phone_number",
+    "email",
+    "given_name",
+    "family_name"
+  ],
+  "passwordPolicyMinLength": 8,
+  "passwordPolicyCharacters": [],
+  "mfaConfiguration": "OFF",
+  "autoVerifiedAttributes": [
+    "email"
+  ],
+  "mfaTypes": []
+}
